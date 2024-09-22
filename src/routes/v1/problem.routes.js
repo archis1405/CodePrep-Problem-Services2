@@ -1,12 +1,12 @@
 const express = require('express');
 
-const { ProblemController } = require('../../controllers');
+const { ProblemController } = require('../../controllers'); 
 
 const problemRouter = express.Router();
 
-problemRouter.get('/:id' , ProblemController.getProblem);
-
 problemRouter.get('/ping' , ProblemController.pingProblemController);
+
+problemRouter.get('/:id' , ProblemController.getProblem);
 
 problemRouter.get('/' , ProblemController.getProblems);
 
