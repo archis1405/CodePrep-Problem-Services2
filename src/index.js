@@ -7,6 +7,8 @@ const errorHandler = require('./utils/ErrorHandler');
 const connectToDB = require('./config/db.config');
 const { default: mongoose } = require('mongoose');
 
+const Problem = require('./models/problem.model');
+
 const app = express();
 
 
@@ -29,7 +31,6 @@ app.listen(PORT , async() => {
     console.log(`Server started at Port : ${PORT}`);
     await connectToDB();
     console.log("Successfully connected to the database");
-
     // dummy code for testing 
     // const Cat = mongoose.model('Cat' , {name : String});
 
